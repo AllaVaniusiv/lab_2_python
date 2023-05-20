@@ -1,28 +1,19 @@
-from Printer import  Printer
-from InkjetPrinter import  InkjetPrinter
-from LaserPrinter  import  LaserPrinter
-from PhotoPrinter  import  PhotoPrinter 
-from ThreeDPrinter  import ThreeDPrinter
+from models.Printer import  Printer
+from models.InkjetPrinter import  InkjetPrinter
+from models.LaserPrinter  import  LaserPrinter
+from models.PhotoPrinter  import  PhotoPrinter 
+from models.ThreeDPrinter  import ThreeDPrinter
 
 class PrinterManager:
 
 	def __init__(self):
 	    """
-	    Initialize a PrinterManager object.
+	    Initializes the PrinterManager object.
 
-	    Initializes an empty list of printers.
-
+	    Attributes:
+	    printers (list): A list of printers, initially empty.
 	    """
-	    self.printers = [
-	    InkjetPrinter("Hp", "inkjet", False, True, 50, 100, "Type1", 100, "Type2", 50, "Type3", 75, "Type4", 80),
-	    InkjetPrinter("Canon", "inkjet", False, True, 55, 100, "Type1", 70, "Type2", 50, "Type3", 105, "Type4", 90),
-	    LaserPrinter("Hp", "laser", True, False, 40, 150, 200, 300),
-	    LaserPrinter("Canon", "laser", True, True, 60, 100, 250, 350),
-	    PhotoPrinter("Hp", "inkjet", True, True, 25, 130, 210, 320),
-	    PhotoPrinter("Canon", "laser", True, True, 30, 85, 245, 330),
-	    ThreeDPrinter("Hp", "inkjet", True, True, 45, 70, 220),
-	    ThreeDPrinter("Canon", "inkjet", True, True, 65, 75, 250),
-	]
+	    self.printers = []
 
 	def add_printer(self, printer):
 	    """

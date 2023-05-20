@@ -1,4 +1,4 @@
-from Printer import  Printer
+from models.Printer import  Printer
 class LaserPrinter(Printer):
     """
     A class inheriting from the Printer class.

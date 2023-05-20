@@ -1,4 +1,4 @@
-from Printer import Printer
+from models.Printer import Printer
 class ThreeDPrinter(Printer):
     """
     A class inheriting from the Printer class.
